@@ -8,9 +8,31 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import i18n from '../lang/i18n'
+import {I18nextProvider} from "react-i18next";
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./Header"
+import Footer from "./Footer"
+
+
+
+import "../../node_modules/slick-carousel/slick/slick.css";
+import "../../node_modules/slick-carousel/slick/slick-theme.css";
+ import 'font-awesome/css/font-awesome.min.css';
+//import "../../node_modules/react-table/react-table.css";
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+//import "../../node_modules/react-table/react-table.css";
+
+
+import '../assets/css/plugins.css';
+import '../assets/css/default.css';
+import '../assets/css/new-fashion.css';
+import '../assets/css/modern.css';
+import '../assets/css/responsive.css';
+import '../assets/css/style.css';
+import '../assets/css/StyleTab.css';
+
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,23 +46,15 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+    <div id="root">
+      <I18nextProvider i18n={i18n}>
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <Header  />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+       
+        <Footer/>
+        </I18nextProvider>
       </div>
-    </>
   )
 }
 

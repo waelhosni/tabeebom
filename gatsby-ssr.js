@@ -1,3 +1,6 @@
+
+
+export { default as wrapRootElement } from './src/Store/ReduxWrapper';
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
  *

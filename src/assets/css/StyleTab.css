@@ -1,0 +1,161 @@
+.tab-list {
+    /* border-bottom: 1px solid #ccc; */
+    padding-left: 0;
+    margin-bottom: 0em !important;
+
+   
+  }
+  
+  .tab-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.8rem 1.2rem;
+
+    color: #fff;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 16px;
+    font-size: 1rem;
+    
+    margin-left: 2px;
+    background-color: #002D4B;
+    min-width:150px;
+    cursor: pointer;
+  }
+  
+  .tab-list-active {
+    background-color: white;
+    border: solid #ccc;
+    border-width: 1px 1px 0 1px;
+
+
+    color: #002D4B;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-color: rgba(11, 78, 115, 0.5);
+    /* border-color: #e1e8ed; */
+    border: 0px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .tab-content
+  {
+   background-color: rgba(11, 78, 115, 0.5);
+   margin: 0 2px;
+   /* min-width: 1000px; */
+   min-height: 100px;
+   padding: 0 10px;
+   
+  }
+
+  .products-header2 {
+    visibility: hidden;
+    left: 25%;
+    top: 300px;
+    position: absolute;
+    z-index: 100;
+    
+   
+   
+  }
+
+  .text-Content-header
+  {
+    left: 7%;
+    top: 70px;
+    position: absolute;
+    z-index: 100;
+    max-width: 900px;
+   
+  }
+  .text-Content
+  {
+    font-family: "Roboto-Regular";
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #2D2D2D;
+    font-size: 40px;
+    line-height: 40px;
+  
+   background-color: rgba(11, 78, 115, 0.6);
+   border-radius: 10px;
+   padding: 15px;
+  }
+  .text-desc
+  {
+    font-family: "Roboto-Regular";
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #2D2D2D;
+    font-size: 30px;
+    line-height: 20px;
+    padding: 30px 15px;
+  }
+
+  @media (max-width:1199px) {
+    .products-header2 {
+        visibility: hidden;
+        left: 25%;
+        top: 300px;
+        position: absolute;
+        z-index: 100;
+       
+       
+      }
+
+  }
+  @media (max-width:575px) {
+
+    .products-header2 {
+        visibility: visible;
+        
+        left: 25%;
+        top: 300px;
+        position: absolute;
+        z-index: 100;
+    
+       
+      }
+    .products-header1 {
+        visibility: hidden;
+    
+       
+      }
+
+      .tab-list {
+        visibility: hidden;
+      }
+      
+      .tab-list-item {
+        visibility: hidden;
+      }
+      
+      .tab-list-active {
+        visibility: hidden;
+      }
+    
+      .tab-content
+      {
+        visibility: hidden;
+      }
+  }
+
+
+  .AboutDoctor
+
+
+  {
+  
+  
+  background-color: #fff;
+  
+  
+  /* margin: 0 2px; */
+  
+  
+  /* min-width: 1000px; */
+  
+  
+  min-height: 100px;
+  
+  
+  
+  
+  }
