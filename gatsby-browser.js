@@ -5,7 +5,7 @@
  */
 
 
- export { default as wrapRootElement } from './src/Store/ReduxWrapper';
+//  export { default as wrapRootElement } from './src/Store/ReduxWrapper';
 
 
 // You can delete this file if you're not using it

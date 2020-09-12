@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import i18n from '../lang/i18n'
 import {I18nextProvider} from "react-i18next";
 
-import Header from "./Header"
+// import Header from "./Header"
 import Footer from "./Footer"
 
 
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
     <div id="root">
       <I18nextProvider i18n={i18n}>
        
-        <Header  />
+        {/* <Header  /> */}
         <main>{children}</main>
        
         <Footer/>
