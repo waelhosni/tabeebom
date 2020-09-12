@@ -147,12 +147,12 @@ class DoctorDetail extends Component {
 
       if(scrollTop > 50)
       {           
-          document.getElementById("btn_booking").setAttribute("class","row boxDoctorProfile hiden_btn sticky-sidebar");
+          document.getElementById("btn_booking").setAttribute("classNam","row boxDoctorProfile hiden_btn sticky-sidebar");
           // window.innerWidth >= 720 &&
           // document.getElementById("ContanierTable").setAttribute("class","product-top-right col-sm-5 profile-screen");  
       } else {
           
-          document.getElementById("btn_booking").setAttribute("class","row boxDoctorProfile hiden_btn");
+          document.getElementById("btn_booking").setAttribute("classNam","row boxDoctorProfile hiden_btn");
           // window.innerWidth <= 720 &&
           // document.getElementById("ContanierTable").setAttribute("class","product-top-right col-md-7 profile-screen");
       }
@@ -225,7 +225,7 @@ class DoctorDetail extends Component {
 
         :"tabeeb, Best, A doctor, booking, appointment, Sultanate, of, Oman, Search"}
 
-      pathname={Productedit?(Productedit[t("DoctorName")] +"/" +Productedit[t("MainSpecializationName")]):this.props.location.pathname}
+      pathname={Productedit?("/" +Productedit[t("DoctorName")] +"/" +Productedit[t("MainSpecializationName")]):this.props.location.pathname}
         /> 
 
         <div>

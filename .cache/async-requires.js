@@ -8,6 +8,7 @@ exports.components = {
   "component---src-pages-doctor-detail-js": () => import("./../../../src/pages/DoctorDetail.js" /* webpackChunkName: "component---src-pages-doctor-detail-js" */),
   "component---src-pages-faq-js": () => import("./../../../src/pages/FAQ.js" /* webpackChunkName: "component---src-pages-faq-js" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
+  "component---src-pages-test-props-js": () => import("./../../../src/pages/TestProps.js" /* webpackChunkName: "component---src-pages-test-props-js" */),
   "component---src-pages-using-typescript-tsx": () => import("./../../../src/pages/using-typescript.tsx" /* webpackChunkName: "component---src-pages-using-typescript-tsx" */)
 }
 

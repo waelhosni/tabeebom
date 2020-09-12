@@ -169,8 +169,11 @@ render(){
                                                     <div className="product-actions-inner">
                                                         <div className="product-action product-action-add-to-cart">
                                                                {
-                                                                     <Link to={`/DoctorDetail?id=${product.DoctorId}`} >
-                                                                        {t("Book")}</Link>
+                                                                     <Link to={`/app/TestProps/${product.DoctorId}`} >
+                                                                     {t("Book")}</Link>
+
+                                                                    //  <Link to={`/DoctorDetail?id=${product.DoctorId}`} >
+                                                                    //     {t("Book")}</Link>
                                                                 
                                                                 }
                                                         </div>

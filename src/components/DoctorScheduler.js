@@ -143,10 +143,10 @@ class DoctorScheduler extends Component {
               
             <div className="row table-Container">
                     <Link className="appointment_book_table_right" onClick={() =>this.navigation('next') }>
-                        <i class="fa fa-chevron-right hide-on-select-date"></i>
+                        <i className="fa fa-chevron-right hide-on-select-date"></i>
                     </Link>
                     <Link className="appointment_book_table_left" onClick={() =>this.navigation('prev') }>
-                        <i class="fa fa-chevron-left hide-on-select-date"></i>
+                        <i className="fa fa-chevron-left hide-on-select-date"></i>
                     </Link>
 
                  {this.state.dayTimes&&

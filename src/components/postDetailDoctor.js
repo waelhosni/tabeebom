@@ -601,13 +601,13 @@ const productslider = {
                             </div>
                             </div>
                             <div className="summary entry-summary col-7">
-                            <samll className='subTitle' style={{color:'#009bde'}}>{product[t('DoctorTitleName')]}</samll>
+                            <h5 className='subTitle' style={{color:'#009bde'}}>{product[t('DoctorTitleName')]}</h5>
                                  <div style={{flexDirection:'row',display:'flex'}}>
                                  <h1 className="tabeebTitleProfile" style={{color:'#002b4e',width:'80%'}}> {product[t('DoctorName')]}</h1> 
                                     <p className="row px-3" style={{color:'#1890ff'}}> <FaEye style={{width:30,height:30,color:'#1890ff',padding:5}}/>{product.DoctorView} </p> 
                                 </div>
                         
-                                            <small className="subTitle" style={{color:'#888'}}>{product[t('MainSpecializationName')]}</small>
+                                            <p className="subTitle" style={{color:'#888'}}>{product[t('MainSpecializationName')]}</p>
                                             <p className='subTitle' style={{color:'#888'}}>{product[t('Overview')]}</p>
                                             <div className='tabeebTitle subTitle'> 
                                                     {product.GenderName=="Male"?

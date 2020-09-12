@@ -5,7 +5,7 @@ module.exports = {
     Visitors  can search for a suitable doctor for their health issue by through sections on specialties, Find Doctors in Muscat Oman`,
     author: `Tabeeb Oman @Technology Business Solutions TBS, info@tabeeboman.com`,
     keywords:`tabeeb, oman, Best, A doctor, Book, booking, Your, appointment, With, Sultanate, of, Oman, Search, find, About, doctors,inside, States, Provinces, Muscat, Salalah, Specializations, Services, wilayat, hospital, clinic, Medical, center,Healthcare, Medical`,
-    siteUrl:`https://TabeebOman.com`
+    siteUrl:`https://TabeebOman.com/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

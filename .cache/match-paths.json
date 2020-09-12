@@ -1,5 +1,9 @@
 [
     {
+        "path": "/TestProps/",
+        "matchPath": "/TestProps/:id"
+    },
+    {
         "path": "/app/",
         "matchPath": "/app/*"
     }

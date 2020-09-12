@@ -20,6 +20,7 @@ function SEO({ description, lang, meta,keywords, title,pathname }) {
             description
             author
             keywords
+            siteUrl
             
           }
         }
@@ -29,7 +30,7 @@ function SEO({ description, lang, meta,keywords, title,pathname }) {
 
   //
   //const metaDescription = description || site.siteMetadata.description
-  const metaDescription =`${description} , ${site.siteMetadata.description}` 
+  const metaDescription =description? description : site.siteMetadata.description 
 
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   
@@ -38,8 +39,8 @@ function SEO({ description, lang, meta,keywords, title,pathname }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+       title={title}
+      // titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
         canonical
           ? [
