@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 import { Col, Collapse, Container, DropdownItem, DropdownMenu, Modal, ModalBody, ModalHeader, Nav, Navbar, NavbarToggler, NavItem, NavLink, Row, TabContent, TabPane, UncontrolledDropdown } from 'reactstrap';
 import logo from '../assets/images/logo_a.png';
 import navLinks from './NavLinks.js';
-import { withTranslation, Trans } from "react-i18next";
+import { withTranslation } from "react-i18next";
 import flat1 from '../assets/images/flag.jpg'
 import flat2 from '../assets/images/flag2.jpg'
 import axios from 'axios'
@@ -43,7 +43,7 @@ class Header extends React.Component {
            
 
         }
-        var removeFromCart, removeFromWishList;
+       
         this.toggle = this.toggle.bind(this);
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.ShowCart = this.ShowCart.bind(this);
@@ -326,7 +326,8 @@ class Header extends React.Component {
 
 
         const { t, i18n } = this.props;
-        const classStyle=(i18n.language.toString()==='ar'?'ar':'en')
+        const classStyle=(i18n.language==='ar'?'ar':'en')
+        const classStyleHeader=(i18n.language==='ar'?'ara-dir':'eng-dir')
 
         const changeLanguage = lng => {
       
@@ -381,9 +382,9 @@ class Header extends React.Component {
                                                                 {/* <li className="menu-item">
                                                                     <Link to="/Account/AccountProfile">My account</Link>
                                                                 </li> */}
-                                                                <li>
+                                                                {/* <li>
                                                                     <a to="#" onClick={this.toggle} data-toggle="modal" data-target="#"><i className="fa fa-sign-in">&nbsp;</i> {t("Log_in")}</a>
-                                                                </li>
+                                                                </li> */}
                                                                 <li>
                                                                    
                                                                 <ul className="header-bar-language">
@@ -456,7 +457,7 @@ class Header extends React.Component {
                                                 </div>
                                                 <div className="clearfix" />
                                             </Col>
-                                            <div className="col" id="mainMenu">
+                                            <div className={`col ${classStyleHeader}`}  id="mainMenu">
                                                 <div className="header-nav header-nav-bg-color-default">
                                                     <div className="header-nav-wrapper">
                                                         <Container>

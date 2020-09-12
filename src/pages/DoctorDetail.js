@@ -4,16 +4,11 @@
 import React , {Component} from 'react';
 import PostDetailDoctor from '../components/postDetailDoctor';
 import { Link } from "gatsby"
-import { Row, Col,Container,Nav, NavItem, NavLink,TabContent, TabPane,Modal, ModalBody, ModalFooter, ModalHeader, } from 'reactstrap';
+import { Row,Container} from 'reactstrap';
 import axios from 'axios'
-import Slider from "react-slick";
 import DoctorSliderRelated from '../components/DoctorSliderRelated';
-import Loader from 'react-loader-spinner'
-import { withTranslation, Trans } from "react-i18next";
-import { FaCalendarAlt,FaHeart,FaRegThumbsUp,FaEye } from 'react-icons/fa';
-import { GiCancel } from 'react-icons/gi';
-import { BsFillChatDotsFill,BsFillHeartFill } from 'react-icons/bs';
-import { FiPhoneCall,FiChevronRight } from 'react-icons/fi';
+import { withTranslation } from "react-i18next";
+
 
 import Layout from '../components/layout';
 import SEO from "../components/seo"
@@ -22,7 +17,7 @@ const saleslider = {
     dots: false,
     infinite: true,
     speed: 500,
-    arrows:false,
+    arrows:true,
     slidesToShow: 6,
 
     slidesToScroll: 2,
@@ -85,10 +80,12 @@ class DoctorDetail extends Component {
         axios.get('https://api.tabeeboman.com/TabebApi/Doctor/GetDoctorResult_List?',
         {
             params: {
-              DoctorId:this.props.location.state.DoctorId,
+               DoctorId:this.props.id,
+               //DoctorId:this.props.location.search.replace('?id=',''),
+              //this.props.id?this.props.id:this.props.location.state.DoctorId,
               specId:'',
               areaId:'',
-  
+  //this.props.location.state.DoctorId,
               //hsId:getState().userDoctorReducer.userDoctor?getState().userDoctorReducer.userDoctor.HospitalId:'',
   
               hsId:'',
@@ -101,7 +98,6 @@ class DoctorDetail extends Component {
               ConsultationFee1:0,
               ConsultationFee2:0,
               patientId: '',
-              patientId:'',
             
               
             }
@@ -114,27 +110,41 @@ class DoctorDetail extends Component {
   
   }
 
-     componentDidMount()
+  componentDidMount()
     {
-        if(!this.state.DoctorItem)
-        {
+        // if(!this.state.DoctorItem)
+        // {
             this.GetDoctorsActionHome()
        
-        }
+        // }
         
        // window.removeEventListener('scroll', this.handleScroll);
         window.scrollTo(0, 0)
         
     }
+
+    //  componentDidUpdate()
+    // {
+    //     // if(!this.state.DoctorItem)
+    //     // {
+    //         this.GetDoctorsActionHome()
+       
+    //     // }
+        
+    //    // window.removeEventListener('scroll', this.handleScroll);
+    //     window.scrollTo(0, 0)
+        
+    // }
     
     componentWillUnmount() {
      // window.removeEventListener('scroll', this.handleScroll);
+     this.GetDoctorsActionHome()
     }
 
     handleScroll(event) {
       var scrollTop = (document.documentElement && document.documentElement.scrollTop) ||
       document.body.scrollTop;
-console.log(scrollTop)
+
       if(scrollTop > 50)
       {           
           document.getElementById("btn_booking").setAttribute("class","row boxDoctorProfile hiden_btn sticky-sidebar");
@@ -176,23 +186,55 @@ console.log(scrollTop)
         
         const classStyle=(i18n.language.toString()==='ar'?'ar':'en')
 
-        
+        const  ServicesClass= Productedit&&(Productedit.ServicesClass!=null?(Productedit.ServicesClass.map((service) => service[t("ServiceName")] +', ')):'' )
+        const  specializationClass= Productedit&&(Productedit.specializationClass!=null?(Productedit.specializationClass.map((specialization) => specialization[t("SpecializationName")] +', ')):'' )
+
 
         
 
     
      return (
       <Layout location={this.props.location} >
+
+    
+
       <SEO 
-      title="Online medical appointments in Oman"
-      description="Best doctor in Oman"
-      keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      pathname={this.props.location.pathname}
+      title={Productedit?(Productedit[t("DoctorName")] +": " +Productedit[t("MainSpecializationName")]+" "+ Productedit[t("AreaName")] +" - "+ Productedit[t('RegionName')]  ):"Tabeeb Oman doctors"}
+      description={Productedit?
+        (
+          
+          t('Request_appointment')+" " +
+          Productedit[t("DoctorTitleName")] + " " +
+          Productedit[t("DoctorName")] + ": " +
+          Productedit[t("MainSpecializationName")] + " " +
+          Productedit[t('HospitalName')]+ " " +
+          Productedit[t('AboutDoctorTitle')] + " " +
+          Productedit[t('EducationTitle')]+ " "
+          +specializationClass
+          +ServicesClass
+         
+        )
+
+        :"Tabeeb Oman doctors"}
+      keywords={Productedit?
+        (
+          ServicesClass+ 
+          specializationClass
+          
+        )
+
+        :"tabeeb, Best, A doctor, booking, appointment, Sultanate, of, Oman, Search"}
+
+      pathname={Productedit?(Productedit[t("DoctorName")] +"/" +Productedit[t("MainSpecializationName")]):this.props.location.pathname}
         /> 
+
         <div>
             {Productedit != null &&
+
+            
                 <div className="site-content">
-                  
+                  {console.log( Productedit.ServicesClass)}
+
                     <div className="inner-intro">
                     <Container>
                         <Row className="intro-title align-items-center">

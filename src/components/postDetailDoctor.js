@@ -8,20 +8,19 @@ import 'react-image-lightbox/style.css';
 import { Link } from "gatsby"
 import Slider from "react-slick";
 import { toast } from 'react-toastify';
-import { Row, Col, Modal, ModalBody, ModalFooter, ModalHeader, } from 'reactstrap';
+import { Row, Modal, ModalBody, ModalFooter, ModalHeader, } from 'reactstrap';
 import ReactCardFlip from 'react-card-flip';
-import { FiPhoneCall,FiChevronRight } from 'react-icons/fi';
+import { FiPhoneCall } from 'react-icons/fi';
 import DoctorScheduler from './DoctorScheduler'
 import axios from 'axios'
 import ReviewDoctor from './ReviewDoctor';
 import loadingImage from '../assets/images/loading.gif';
 import errorImage from '../assets/images/error.png';
 import { MdRateReview } from 'react-icons/md';
-import { withTranslation, Trans } from "react-i18next";
-// import { Redirect } from 'react-router';
+import { withTranslation } from "react-i18next";
 
 
-import { BsFillChatDotsFill,BsFillHeartFill } from 'react-icons/bs';
+import { navigate } from "gatsby"
 
 import { FaUniversity ,FaGraduationCap,FaComment,
     FaUserMd,FaMedkit,FaEye,FaFemale,FaMale,FaImages,
@@ -248,8 +247,10 @@ const productslider = {
       }
 
       handleScroll(event) {
-        var scrollTop = (document.documentElement && document.documentElement.scrollTop) ||
-        document.body.scrollTop;
+          
+        // var scrollTop = (document.documentElement && document.documentElement.scrollTop) ||
+        // document.body.scrollTop;
+        var scrollTop = document.documentElement.scrollTop
 
         if(scrollTop > 100)
         {           
@@ -456,11 +457,9 @@ const productslider = {
     render() {
         const { t ,i18n} = this.props;
         const { photoIndex, isOpen  } = this.state;
-        const qty=this.state.qty;
         const {product} = this.props;
         const images=[];
         const doctorPath='https://admin.tabeeboman.com/Documents/DoctorPictures/100X100/';
-        const HospitalImagePath= 'https://admin.tabeeboman.com/Documents/HospitalPictures/Pictures/';
         const ImageOtherPath ="https://admin.tabeeboman.com/Documents/DoctorPictures/Other/";
         const SpecImagNat='https://admin.tabeeboman.com/Documents/Flags/';
         const hospitalImg='https://admin.tabeeboman.com/Documents/HospitalPictures/Logo/';
@@ -507,15 +506,16 @@ const productslider = {
         };
 
 
-        // if (this.state.redirect) {
-        //     return <Redirect  to={{
-        //         pathname: '/SuccessScreen',
-        //         state: { appointmentData: this.state.appointmentData,patientOrg: this.state.patientOrg,DoctorId:product.DoctorId }
-        //     }} />;
-        //   }
+        if (this.state.redirect) {
+            navigate("/SuccessScreen",
+                    {
+                state: { appointmentData: this.state.appointmentData,patientOrg: this.state.patientOrg, }
+              }
+            )
+          }
 
 
-        const classStyle=(i18n.language.toString()==='ar'?'product-content-top single-product-ar':'product-content-top single-product-en')
+        const classStyle=(i18n.language==='ar'?'product-content-top single-product-ar':'product-content-top single-product-en')
 
        
         return (
@@ -541,12 +541,12 @@ const productslider = {
                                                                    </a>
                                                                </div>
                                                                <div className="item element_group_3 valign_top">
-                                                                   <Link className="ver_telefono text-center" to="#" onClick={this.toggleCall} data-toggle="modal" data-target="#" >
+                                                                   <a className="ver_telefono text-center" to="#" onClick={this.toggleCall} data-toggle="modal" data-target="#" >
                                                                        <span className="btn btn2 btn_dark btn-block search_doctor_agenda_btn">
                                                                        <FiPhoneCall className="ico-phone-dark search_doctor_agenda_icon"/>
                                                                            <p className="search_doctor_agenda_icon_text">{t("Call")}</p>
                                                                        </span>
-                                                                   </Link>
+                                                                   </a>
                                                                </div>
                                
                                                                 <Modal isOpen={this.state.modalCall} toggle={this.toggleCall} className="modal-login f">
@@ -579,9 +579,9 @@ const productslider = {
                                             (<img src={this.state.profileImage} placeholder={loadingImage} error={errorImage} alt={product.DoctorName} className="img-thumbnail" style={{borderRadius:10}}/>)
                                             :
                                             (product.GenderName=="Female"?
-                                            <img placeholder={loadingImage} error={errorImage} src={require(`../assets/images/EmptyPicDoctorFemale.jpg`)} alt={product.DoctorName} className="img-thumbnail" style={{width:320,height:350,borderRadius:10}}/>
+                                            <img placeholder={loadingImage} error={errorImage} src={require(`../assets/images/female1.jpg`)} alt={product.DoctorName} className="img-thumbnail" style={{width:320,height:350,borderRadius:10}}/>
                                             :
-                                            <img  placeholder={loadingImage} error={errorImage}  src={require(`../assets/images/EmptyPicDoctorMale.jpg`)} alt={product.DoctorName} className="img-thumbnail" style={{width:320,height:350,borderRadius:10}}/>
+                                            <img  placeholder={loadingImage} error={errorImage}  src={require(`../assets/images/male.png`)} alt={product.DoctorName} className="img-thumbnail" style={{width:320,height:350,borderRadius:10}}/>
                                             )}
                                     </div>
                                 
@@ -603,8 +603,8 @@ const productslider = {
                             <div className="summary entry-summary col-7">
                             <samll className='subTitle' style={{color:'#009bde'}}>{product[t('DoctorTitleName')]}</samll>
                                  <div style={{flexDirection:'row',display:'flex'}}>
-                                 <h1 className="tabeebTitleProfile" style={{color:'#002b4e'}}> {product[t('DoctorName')]}</h1> 
-                                    <p className="col" style={{color:'#1890ff'}}> <FaEye style={{width:30,height:30,color:'#1890ff',padding:5}}/>{product.DoctorView} </p> 
+                                 <h1 className="tabeebTitleProfile" style={{color:'#002b4e',width:'80%'}}> {product[t('DoctorName')]}</h1> 
+                                    <p className="row px-3" style={{color:'#1890ff'}}> <FaEye style={{width:30,height:30,color:'#1890ff',padding:5}}/>{product.DoctorView} </p> 
                                 </div>
                         
                                             <small className="subTitle" style={{color:'#888'}}>{product[t('MainSpecializationName')]}</small>
@@ -654,15 +654,16 @@ const productslider = {
                    
 
                 
-                    </div>
-                    <div className="row marginHospitalTitle" >
-                                        <Link className="row" to={`/shop/${product.RegionName}/${product.HospitalId}`}>
+                    </div> 
+                    <Link to={`/HospitalDetail?${product.HospitalId}`} className="mx-5" >
+                    <div className="row" >
+                               
                                        
-                                    <img src={hospitalImg+product.HospitalLogo} alt={product.NationalityName} className="iconNational" style={{width:50,height:50,borderRadius:100}} placeholder={loadingImage} error={errorImage}/>
+                                               <img src={hospitalImg+product.HospitalLogo} alt={product.NationalityName} className="iconNational" style={{width:50,height:50,borderRadius:100}} placeholder={loadingImage} error={errorImage}/>
                                                                     <h6 style={{color:"#002b4e",alignSelf:'center' ,marginBottom:0,padding:5}}>{product[t('HospitalName')]}</h6>
-                                    </Link>
+                                  
                                      </div>
-                    
+                      </Link>
                         </div>
                         { (Services||Specializations||InsurancesClass||product[t('AboutDoctorTitle')]||product[t('EducationTitle')] )&&     
                        <div className="row boxDoctorProfile">

@@ -4,14 +4,7 @@
  */
 import React, { Component } from 'react';
 import { Link } from "gatsby"
-import { toast, ToastContainer } from 'react-toastify';
-import MaleImg from '../assets/images/male.png'
-import FemaleImg from '../assets/images/female.png'
-import { FiPhoneCall } from 'react-icons/fi';
-import { BsFillChatDotsFill,BsFillHeartFill } from 'react-icons/bs';
-import { FaCalendarAlt,FaHeart } from 'react-icons/fa';
-//import '../assets/css/time-table.css'
-import { withTranslation, Trans } from "react-i18next";
+import { withTranslation } from "react-i18next";
 
 
 

@@ -2,48 +2,12 @@
  *  Testimonial Widgets
  */
 import React , {Component} from 'react';
-import Slider from "react-slick";
-import MaleImg from '../assets/images/male.png'
-import FemaleImg from '../assets/images/female.png'
 import axios from 'axios'
 import Loader from 'react-loader-spinner'
-import { withTranslation, Trans } from "react-i18next";
+import { withTranslation } from "react-i18next";
 
 
-const settings = {
-    dots: true,
-    autoplay: true,
-      autoplaySpeed: 5000,
-      infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-     adaptiveHeight: false,
-    slidesToScroll: 1, 
-    responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1
-          }
-        },
-        {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-  };
 
- 
-
-  
 
 class ReviewDoctor extends Component {
 
@@ -53,8 +17,6 @@ class ReviewDoctor extends Component {
      
         this.state = {
          
-            DoctorsReviews: [],
-            isLoading: true,
             error: null,
         };
       }
@@ -78,7 +40,7 @@ class ReviewDoctor extends Component {
     
       .then(response => {
        
-        console.log(response.data.TopDoctors)
+       
         this.setState({ 
             DoctorsReviews:response.data.DoctorsReviews,
                 isLoading: false })})
@@ -111,9 +73,8 @@ class ReviewDoctor extends Component {
 
    render() {
 
-    const DoctorImgPath='https://admin.tabeeboman.com/Documents/DoctorPictures/100X100/';
-    const { DoctorsReviews, isLoading } = this.state;
-    const { product } = this.props;
+   
+    const { DoctorsReviews } = this.state;
     const { t } = this.props;
     
 

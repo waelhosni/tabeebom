@@ -7,14 +7,14 @@
 
 body,
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tajawal";
   font-weight: 400;
   line-height: 24px;
   font-size: 14px;
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal";
   font-weight: 700;
   line-height: 44px;
   font-size: 36px;
@@ -22,21 +22,21 @@ h1 {
 
 h2,
 .deal-banner .caption h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal";
   font-weight: 700;
   line-height: 38px;
   font-size: 30px;
 }
 
 h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal";
   font-weight: 500;
   line-height: 34px;
   font-size: 26px;
 }
 
 h4 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal";
   font-weight: 500;
   line-height: 30px;
   font-size: 22px;
@@ -44,7 +44,7 @@ h4 {
 
 h5,
 .testimonials h5 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal";
   font-weight: 500;
   line-height: 28px;
   font-size: 20px;
@@ -54,7 +54,7 @@ h6,
 .share h5,
 .share ul,
 .sidebar .widget .item-detail h4 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal";
   font-weight: 500;
   line-height: 22px;
   font-size: 18px;

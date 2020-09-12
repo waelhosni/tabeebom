@@ -1,5 +1,6 @@
 /* media */
 @media (max-width:1400px) {
+  
   .slider-01 .slide-content .slide-title h1 {
     font-size: 110px;
     line-height: 110px;
@@ -1297,6 +1298,7 @@
   }
 
   .admin-menu .navbar-expand-md .navbar-nav .dropdown-menu {
+    padding-right: 0px;
     width: 100%;
     position: relative;
   }
@@ -2314,3 +2316,14 @@
 
 
 }
+
+
+@media (min-width: 768px)
+{
+.navbar-expand-md .navbar-nav {
+  padding-right: 0px;
+    flex-direction: row;
+}
+}
+
+

@@ -1,4 +1,4 @@
-import React from "react";
+
 import flat2 from '../../../assets/images/flag.jpg'
 
 
@@ -95,7 +95,7 @@ let en = {
       "Overview":"Overview",
       "LanguageName":"LanguageName",
       "PreferredLanguages":"Preferred languages",
-      "HospitalName":"HospitalName",
+
       "ServiceName":"ServiceName",
       "Services":"Services",
       "Specializations":"Specializations",
@@ -237,7 +237,7 @@ let en = {
 "FAQ":"FAQ",
 
 
-"Information":"Information",
+
 
 
 "ContactInfo":"Contact Info",
@@ -254,8 +254,164 @@ let en = {
 
 "All_Rights_Reserved":"All Rights Reserved",
 
-      
-      
+"LoginPatient":"Login Patient",
+"SignUpPatient":"Sign Up Patient",
+"SignUpMedicalCenter":"Sign Up Medical center " ,
+"Information":"Information",
+
+"Address":"67 Al-Maha Street Al-Khwair, Near Al Maya Market. Office 13",
+
+
+//Home Video 
+
+"title_pragraph_video_1":"How to book an appointment",
+"pragraph_video_1":"The application gets you online booking without the hassle of waiting Your medical world is in your hand",
+"readMoreVideo":"Read More...",
+"title_pragraph_video_2":"About Tabeeb Oman",
+"pragraph_video_2":"Save your time and book with your doctor Find the right doctor by specialty and location Doctors in all specialties and medical centers and hospitals in all states",
+//
+ 
+
+
+
+
+ 
+//login Doctor 
+
+
+"forget_password":"Forgot my password",
+
+
+"Notmember":"Not a member?",
+
+
+
+
+"LogIn_Hospital_Doctor":"Log In as Medical center & Doctor",
+
+ 
+
+//aboutUs
+
+ 
+
+"titlePragABout":"Get to know us better",
+
+
+"PragABout1":"Tabeeb Oman (Tabeeb Dot Om) is the first integrated Omani medical platform, but it is an integrated medical world in your hands, a portal that takes you to the medical world of Oman ",
+
+
+"PragABout2":'We were keen on the presence of all medical specialties and worked to coordinate with all medical centers in the Sultanate, it is not only an appointment with a doctor, it is an integrated medical world',
+
+
+"PragABout3":'We were keen to have in your hands complete information about doctors, appointments and medical centers within the Sultanate, Doctor Dot Om, which brings together hundreds of Omani clinics, medical centers and hospitals in one place',
+
+
+"PragABout4":"You can easily search by specialty, region, or medical center. Doctor of Oman enables you to search for the right doctor and choose from the list of doctors that suits your needs and easily book at the appropriate time.",
+
+
+"PragABout5":"Tabeeb Oman staff provides medical staff to direct you to the required specialty. Just write to Tabeeb Dot Om, and one of our doctors licensed by the Ministry of Health will respond to you to direct you to the required specialty",
+
+
+"PragABout6":"Promotional Offers Doctor Oman allows you to search for promotional offers within the Sultanate issued by various medical centers. You can view them now easily",
+
+
+"PragABout7":"Pharmacies You can search for pharmacies near you, call them and quickly go to them for medical supplies",
+
+
+"PragABout8":"We at Tabeeb Oman were keen to be a link between the doctor and various medical supplies companies. You can now view the latest medical releases and various devices and request them directly from Tabeeb Oman",
+
+
+"OurServices":"Our Services",
+
+
+"onlineBookingAbou":'Online Booking',
+
+
+"PatientProfileAbou":"Patient Profile",
+
+
+"SupportAbou":"Technical support",
+
+
+"PharmacyAbou":"Pharmacy",
+
+
+"HospitalAbou":"Hospitals & clinicals ",
+
+
+"InsuranceAbou":"Medical Insurance",
+
+
+"tabeebomanSlug":"Tabeeb Oman your medical world in your hands",
+
+ 
+
+// Sign Up Hospital
+
+ 
+
+"Create_Medical_center_account":"Create Medical center account",
+
+
+"Medical_Center_Name_English":"Medical Center Name English",
+
+
+"Medical_Center_Name_Arabic":"Medical Center Name Arabic",
+
+
+"Medical_Center_Phone":" Phone Number",
+
+
+"Medical_Center_Office":" Office Number",
+
+
+"Medical_Center_Email":" Email",
+
+
+"Medical_Center_Region":" Region",
+
+
+"SelectRegion":"Select Region",
+
+
+"Medical_Center_Wilayat":" Wilayat",
+
+
+"SelectWilayat":"Select Wilayat",
+
+
+"have_account":"Already have an account?",
+
+
+"Medical_Center_Address":" Address",
+
+
+"byClicking1":"By clicking Register Account, you agree to our Terms,",
+
+
+"byClicking2":"Data Policy",
+
+
+"byClicking3":"and Cookie Policy.",
+
+
+"byClicking4":"You may receive SMS notifications from us and can opt out at any time.",
+
+
+"RegisterAccount":"Register Account",
+
+
+"thankRegister":"Thank you for your registration",
+
+
+"Ok":"Ok",
+"Request_appointment":"Request an appointment with",
+
+
+
+ 
+
     }
   };
   

@@ -158,7 +158,8 @@ function SEO({ description, lang, meta,keywords, title,pathname }) {
       .concat(
             {
               name: `keywords`,
-              content:`${site.siteMetadata.keywords} , ${keywords.length > 0 && keywords.join(`, `)}`  
+              content:`${keywords}`
+              // content:`${site.siteMetadata.keywords} , ${keywords.length > 0 && keywords.join(`, `)}`  
             }
         
       )

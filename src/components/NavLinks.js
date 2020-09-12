@@ -154,7 +154,7 @@ export default [
             "child_routes": null
          },
          {
-            "path": "/",
+            "path": "/PrivacyAndPolicis",
             "menu_title": "Privacy Policy",
             "menu_titleAr": "سياسة خاصة",
             "icon": "arrow_right_alt",
@@ -168,9 +168,41 @@ export default [
          // }
          // ,
          {
-            "path": "/",
+            "path": "/FAQ",
             "menu_title": "FAQ",
             "menu_titleAr": "الأسئلة الشائعة",
+            "icon": "arrow_right_alt",
+            "child_routes": null
+         },
+
+         {
+            "path": "/LoginPage",
+            "menu_title": "Login Patient",
+            "menu_titleAr": "دخول المراجعين",
+            "icon": "arrow_right_alt",
+            "child_routes": null
+         },
+
+         {
+            "path": "/SignUpPage",
+            "menu_title": "Sign Up Patient",
+            "menu_titleAr": "تسجيل مراجع جديد",
+            "icon": "arrow_right_alt",
+            "child_routes": null
+         },
+
+         {
+            "path": "/LoginPageDoctor",
+            "menu_title": "Sign Up Medical center",
+            "menu_titleAr": "دخول المراكز الطبية",
+            "icon": "arrow_right_alt",
+            "child_routes": null
+         },
+
+         {
+            "path": "/SignUpPageDoctor",
+            "menu_title": "Sign Up Medical center ",
+            "menu_titleAr": "تسجيل جديد المركز الطبيه ",
             "icon": "arrow_right_alt",
             "child_routes": null
          },

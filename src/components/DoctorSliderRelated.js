@@ -3,14 +3,14 @@
  */
 import React, { Component } from 'react';
 import Slider from "react-slick";
-import { Row, Col, Container } from 'reactstrap';
+import { Col } from 'reactstrap';
 import { Link } from "gatsby"
 import { ToastContainer, toast } from 'react-toastify';
 import MaleImg from '../assets/images/male.png'
 import FemaleImg from '../assets/images/female.png'
 import axios from 'axios'
 import Loader from 'react-loader-spinner'
-import { withTranslation, Trans } from "react-i18next";
+import { withTranslation } from "react-i18next";
 
 class DoctorSliderRelated extends Component {
     
@@ -129,7 +129,7 @@ class DoctorSliderRelated extends Component {
     
       .then(response => {
        
-        console.log(response.data.TopDoctors)
+        
         this.setState({ 
         DoctorList:response.data.TopDoctors,
         isLoading: false })})
@@ -150,7 +150,6 @@ render(){
 
     
     const DoctorImgPath='https://admin.tabeeboman.com/Documents/DoctorPictures/100X100/';
-    const FlagsImgPath='https://admin.tabeeboman.com/Documents/Flags/';
     const settings = this.props.settings;
     const { DoctorList, isLoading } = this.state;
     const { t ,i18n} = this.props;
@@ -165,7 +164,7 @@ render(){
         
         )
     }
-    const classStyle=(i18n.language.toString()==='ar'?'ar':'en')
+    const classStyle=(i18n.language==='ar'?'ar':'en')
     return (
         <Col sm={12}>
             <ToastContainer autoClose={1000} />
@@ -180,7 +179,7 @@ render(){
                                         <div className="product-inner element-hovered">
                                             <div className="product-thumbnail">
                                                 <div className="product-thumbnail-inner">
-                                                    <a href={`/Doctors/${product.MainSpecializationId}/${product.DoctorId}`}> 
+                                                     <Link to={`/DoctorDetail?id=${product.DoctorId}`} >
                                                     <div className="product-thumbnail-main">
                                                         <img src={product.ImageData?DoctorImgPath+product.ImageData:product.GenderName=='Male'?MaleImg:FemaleImg} alt={product.DoctorName} className="img-fluid doctor-related-slider-img" />
                                                     </div>
@@ -198,14 +197,16 @@ render(){
 
 
                                                         
-                                                    </a>
+                                                    </Link>
                                                 </div>
 
                                                 <div className="product-actions">
                                                     <div className="product-actions-inner">
                                                         <div className="product-action product-action-add-to-cart">
                                                                {
-                                                                    <Link onClick={() => product.DoctorId} className="button add_to_cart_button" rel="nofollow">{t("Book")}</Link>
+                                                                  
+                                                                        
+                                                                        <Link className="button add_to_cart_button" to={`/DoctorDetail?id=${product.DoctorId}`} >{t("Book")}</Link>
                                                                 
                                                                 }
                                                         </div>
@@ -230,7 +231,7 @@ render(){
                                                 
                                                
                                                 <h3 className="product-name">
-                                                    <a title={product.DoctorName} href={`/Doctors/${product.MainSpecializationId}/${product.DoctorId}`}>{product[t("DoctorName")]}</a>
+                                                <Link to={`/DoctorDetail?id=${product.DoctorId}`} >{product[t("DoctorName")]}</Link>
                                                 </h3>
                                                 <span className="region-product-category">
                                                     {product[t("HospitalName")]}

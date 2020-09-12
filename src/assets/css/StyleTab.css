@@ -60,7 +60,8 @@
 
   .text-Content-header
   {
-    left: 7%;
+    left: 20%;
+    right: 20%;
     top: 70px;
     position: absolute;
     z-index: 100;
@@ -69,7 +70,7 @@
   }
   .text-Content
   {
-    font-family: "Roboto-Regular";
+    font-family: "Tajawal";
     color: #ffffff;
     text-shadow: 1px 1px 2px #2D2D2D;
     font-size: 40px;
@@ -81,11 +82,11 @@
   }
   .text-desc
   {
-    font-family: "Roboto-Regular";
+    font-family: "Tajawal";
     color: #ffffff;
     text-shadow: 1px 1px 2px #2D2D2D;
     font-size: 30px;
-    line-height: 20px;
+    line-height: 35px;
     padding: 30px 15px;
   }
 

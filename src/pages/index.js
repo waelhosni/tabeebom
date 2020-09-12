@@ -8,12 +8,10 @@ import SEO from "../components/seo"
 
 
 import DoctorSlider from '../components/DoctorSlider';
-import HospitalLogoSlider from '../components/HospitalLogoSlider.js';
-import ReviewSlider from '../components/ReviewSlider';
-import HomeSlider from '../components/HomDefaultSlider.js';
+// import HospitalLogoSlider from '../components/HospitalLogoSlider.js';
+// import ReviewSlider from '../components/ReviewSlider';
+// import HomeSlider from '../components/HomDefaultSlider.js';
 
-import  {receiveProducts,receiveDoctors,receiveHospital} from '../Store/actions';
-import { connect } from 'react-redux';
 
 
 const doctorSlider = {
@@ -48,12 +46,7 @@ const doctorSlider = {
 
 class index extends React.Component {
   
- componentWillMount()
-    {
-       this.props.receiveProducts();
-      this.props.receiveDoctors();
-       this.props.receiveHospital();
-    }
+ 
 
   render() {
         const { t } = this.props;
@@ -71,7 +64,7 @@ class index extends React.Component {
         <div>
              
                 
-                <HomeSlider />
+                {/* <HomeSlider /> */}
                 <div id="content" className="site-content" tabIndex={-1}>
                             <div className="content-wrapper content-wrapper-vc-enabled">
                                 <div className="container-fluid">
@@ -119,7 +112,7 @@ class index extends React.Component {
                                                             {t("Review_Header")} 
                                                             </span>
 
-                                                                <ReviewSlider />
+                                                                {/* <ReviewSlider /> */}
                                                                 <div className="btnReview">
                                                                     <div className="button-see-more-review">
                                                                     {t("See_more_review")} 
@@ -151,7 +144,7 @@ class index extends React.Component {
                                                     </Container>
                                                     <Container>
                                                         <Row>
-                                                            <HospitalLogoSlider />
+                                                            {/* <HospitalLogoSlider /> */}
                                                         </Row>
                                                     </Container>
 
@@ -185,17 +178,10 @@ class index extends React.Component {
     }
 }
 
-const AppMapStateToProps = state => {
-  
-    return {
-      products: state.data.products,
-      doctors: state.doctors.doctors,
-      hospitals:state.hospitals.hospitals,
-    };
-  };
+
  
 
-export default connect(AppMapStateToProps,{receiveProducts,receiveDoctors,receiveHospital})(withTranslation("translations")(index))
+export default withTranslation("translations")(index)
 
 
 

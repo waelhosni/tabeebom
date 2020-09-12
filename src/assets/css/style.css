@@ -3051,13 +3051,30 @@
   text-shadow: none;
 }
 
+/* body {
+  color: #969696;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+ 
+  font-family: "Tajawal";
+} */
+
+/* @import url('https://fonts.googleapis.com/css?family=Tangerine'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lemonada');
+@import url('https://fonts.googleapis.com/css?family=Tajawal:700');
+
+html {
+  font-family: 'Rancho', sans-serif;
+}
 body {
   color: #969696;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  /* font-family: "Poppins", sans-serif; */
-  font-family: "Roboto-Regular";
+ 
+  font-family: "Rancho";
 }
 
 .button,
@@ -4750,7 +4767,7 @@ header.site-header.is-sticky .mega-menu .menu-links > li .drop-down.grid-col-12 
 .compare-modal .compare-content {
   padding: 10px;
   /* font-family: "Poppins", sans-serif; */
-  font-family: "Roboto-Regular";
+  font-family: "Tajawal";
   position: relative;
 }
 
@@ -5013,6 +5030,7 @@ header.site-header .dropdown-toggle:after {
   content: "\f107";
   font-family: FontAwesome;
   margin-left: 6px;
+  margin-right: 6px;
   vertical-align: middle;
   border: medium none;
 }
@@ -5084,7 +5102,7 @@ header.site-header .dropdown-toggle:after {
 
 .navbar-light .navbar-nav .nav-link {
   color: #002d4b;
-  font-size: 14px;
+  font-size: 16px;
   padding: 5px 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -5108,6 +5126,7 @@ nav.navbar.navbar-light.bg-faded {
 }
 
 .navbar-expand-md .navbar-nav .dropdown-menu {
+  padding-right: 0px;
   position: absolute;
   top: 100%;
   left: auto;
@@ -5133,7 +5152,7 @@ nav.navbar.navbar-light.bg-faded {
 
 .navbar-light .navbar-nav .nav-link {
   color: #002d4b;
-  font-size: 14px;
+  font-size: 16px;
   padding: 29px 10px;
   text-transform: uppercase;
 }
@@ -5168,7 +5187,7 @@ footer.site-footer .footer-widgets-wrapper {
 }
 
 footer.site-footer .logo-wrapper {
-  text-align: left;
+  text-align: initial;
 }
 
 footer.site-footer .logo-wrapper img {
@@ -5298,6 +5317,7 @@ footer.site-footer .footer-nav-menu ul li a:hover:before {
 footer.site-footer .pgs-contact-widget ul li i {
   display: table-cell;
   padding-right: 10px;
+  padding-left: 10px;
   min-width: 24px;
   color: #d89044;
 }
@@ -5607,6 +5627,11 @@ footer.site-footer .footer-align-right {
   text-align: right;
 }
 
+footer.site-footer .footer-align-initial
+{
+  text-align:initial;
+
+}
 /********************************
     footer-style-2
 ********************************/
@@ -7172,7 +7197,7 @@ footer.site-footer.footer-style-2 .footer-widgets-wrapper {
   position: relative;
   overflow: hidden;
   background: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tajawal";
 }
 
 .TabeebOman_banner .TabeebOman_banner-image {
@@ -7760,7 +7785,7 @@ footer.site-footer.footer-style-2 .footer-widgets-wrapper {
   display: table;
   position: relative;
   overflow: hidden;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tajawal";
 }
 
 .kite-box .kite-images-wrapper {
@@ -10828,7 +10853,7 @@ footer.site-footer.footer-style-2 .footer-widgets-wrapper {
   left: 0;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tajawal";
 }
 
 .price_slider_wrapper .input-range__label--max,
@@ -18368,7 +18393,7 @@ ul.products .product-inner .product-info .stock {
 }
 
 .slider-spacing-10 .item > div {
-  margin:  15px;
+  margin:  5px;
 }
 
 .latest-post-style-1 .slick-slider .latest-post-item {
@@ -19560,7 +19585,7 @@ button:focus {
 
 
 .header_main_theme_small {
-  font-family: 'Roboto-Regular';
+  font-family: 'Tajawal';
   font-size: 115%;
   display: block;
     line-height: 150%;
@@ -20953,6 +20978,7 @@ color: #009bde;
   .tab-content1
   {
     background-color:#fff;
+    visibility: visible;
   }
 
   .img-fluidSecur
@@ -23425,7 +23451,7 @@ color: #009bde;
 .single-product-en .marginHospitalTitle{
 
 
-  margin-left: 40%;
+  margin-left: 5%;
   
   
   }
@@ -23956,5 +23982,59 @@ color: #009bde;
   grid-column: span 4;
 }
 
+
+.ara-dir{
+direction: rtl;
+}
+
+.eng-dir{
+  direction: ltr;
+  }
+
+
+  .text-Content-header-ara{
+    right: 20%;
+    left: 20%;
+    direction: rtl;
+    }
+    .text-align-ara{
+    text-align: right;
+    }
+
+
+
+
+    /* new */
+
+ 
+
+.ara-dir.margintitle{
+
+
+  margin-left:20px
+  
+  
+  }
+  
+  
+  .header_intro_bg_about-image {
+  
+  
+  background-repeat: no-repeat !important;
+  
+  
+  background-size: cover !important;
+  
+  
+  /* background-attachment:fixed !important; */
+  
+  
+  background-position:center center !important;
+  
+  
+  background-image: url("../images/coverAbout.jpg") !important;
+  
+  
+  }
 
 
